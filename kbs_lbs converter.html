@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert to Kgs/lbs</h2>
+<table>
+	<tr>
+		<td></td>
+		<td id="label1">In lbs</td>
+  </tr>
+	<tr>
+		<td>
+			<input id="txt1" type="text" placeholder="Enter in kgs" onkeyup="document.getElementById('valuee').innerHTML = this.value*val;">
+    </td>
+		<td id="valuee"></td>
+  </tr>
+	<tr>
+		<td>
+			<button onclick="convert()">Convert to kgs</button>
+    </td>
+		<td></td>
+  </tr>
+</table>
+
+<script> 
+  let count = 0;
+  let val = 2.20462;
+    
+  function convert() {
+    if (count == 0){
+      document.getElementById('label1').innerHTML = "In kgs";
+      document.getElementById('txt1').placeholder = "Enter In lbs";
+      count = 1; val = 0.453592;    
+    }
+    else{
+    	document.getElementById('label1').innerHTML = "In lbs";
+      document.getElementById('txt1').placeholder = "Enter In kgs";
+    	count = 0; val = 2.20462;
+    }
+  }
+</script>
+
+</body>
+</html>
